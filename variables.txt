@@ -1,0 +1,54 @@
+---
+title: "Estadisticas del ICFES para el departamento del Tolima"
+author: "Oscar Rios y Fredy Medina"
+date: "2023-03-24"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Cargue de datos
+
+Vamos a cargar las librerias utilizadas, asi como la información.
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+## Librerias usadas
+rm(list = ls())
+library(patchwork)
+library(cowplot)
+library(psych)
+library(tidyverse)
+library(DT)
+
+```
+## Descripcion de las variables
+
+|     **Variable**       | **Descripción**         |
+|------------------------|-------------------------|
+|ESTU_DEPTO_RESIDE       | Departamento donde reside|
+|FAMI_ESTRATOVIVIENDA    | Estrato de la vivienda|
+|FAMI_PERSONASHOGAR      | Personas en el hogar|
+|FAMI_EDUCACIONPADRE     | Nivel de educación del Padre|
+|FAMI_EDUCACIONMADRE     | Nivel de educación de la Madre|
+|FAMI_TIENEINTERNET      | Tiene internet en la vivienda|
+|FAMI_TIENECOMPUTADOR    | Tiene computador en la vivienda|
+|FAMI_COMELECHEDERIVADOS | Familia come lacteos|
+|FAMI_COMECARNEPESCADOHUEVO  | Familia come carne, pescado o huevo|
+|FAMI_COMECEREALFRUTOSLEGUMBRE | Familia come cereal, frutos o legumbres|
+|ESTU_DEDICACIONINTERNET | Dedicacion al estudio en internet|
+|COLE_GENERO             | Genero del colegio |
+|COLE_NATURALEZA         | Naturaleza del colegio|
+|COLE_CALENDARIO         | Calendario academico|
+|COLE_CARACTER           | Caracter academico del colegio|
+|COLE_JORNADA            | Jornada de estudio|
+|PUNT_LECTURA_CRITICA    | Puntaje de lectura critica |
+|PUNT_MATEMATICAS        | Puntaje de Matematicas  |
+|PUNT_C_NATURALES        | Puntaje de Ciencias Naturales |
+|PUNT_SOCIALES_CIUDADANAS| Puntaje de Sociales Ciudadanas |
+|PUNT_INGLES             | Puntaje de Ingles|
+|PUNT_GLOBAL             | Puntaje Global |
+|ESTU_FECHANACIMIENTO    | Fecha de nacimiento del estudiante|
+|ESTU_GENERO             | Genero del estudiante|
+|ESTU_GENERACION-E       | Programa de Becas |
